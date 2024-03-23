@@ -1,6 +1,7 @@
 import React from 'react'
 import './Signup.css'
 import { useNavigate, Link } from 'react-router-dom'
+import axios from 'axios'
 
 const Signup = () => {
 
@@ -11,7 +12,6 @@ const Signup = () => {
     const navigate = useNavigate();
 
     const handleSubmit = async(e) => {
-        
     }
 
    
