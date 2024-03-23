@@ -1,10 +1,24 @@
 import React from 'react'
 import './Login.css'
+import {Link, useNavigate} from 'react-router-dom'
 
-export default function Login() {
 
-  return 
-  (
+
+
+const Login = () => {
+
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('')
+
+    const navigate = useNavigate();
+
+    const handleSubmit = async(e) => {
+
+    }
+
+
+
+  return (
     <div className = "login-page">
         <div className = "login-container">
             <h1>Login</h1>
@@ -34,6 +48,7 @@ export default function Login() {
             </form>
         </div>
     </div>
-
   )
 }
+
+export default Login
