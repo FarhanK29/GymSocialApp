@@ -1,7 +1,6 @@
 import React from 'react'
 import { database } from '../../config/firebase'
 import { getDatabase, ref, push } from 'firebase/database';
-import firebase from './firebase'
 
 
 
@@ -124,7 +123,7 @@ export default function FindBuddy() {
           </label>
         </div>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">Look for a Buddy!</button>
     </form>
   )
 }
