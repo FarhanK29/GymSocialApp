@@ -45,7 +45,6 @@ const Signup = () => {
                 <input
                 className = "signup-input"
                 type = "email"
-                placeholder = "Email"
                 id = "signup-email"
                 onChange = {(e) => setEmail(e.target.value)}
                 />
@@ -54,7 +53,6 @@ const Signup = () => {
                 <input
                 className = "signup-input"
                 type = "password"
-                placeholder = "Password"
                 id = "signup-password"
                 onChange = {(e) => setPassword(e.target.value)}
                 />
@@ -63,7 +61,6 @@ const Signup = () => {
                 <input
                 className = "signup-input"
                 type = "password"
-                placeholder = "Confirm Password"
                 id = "signup-confirmPass"
                 onChange = {(e) => setConfirmPass(e.target.value)}
                 />
