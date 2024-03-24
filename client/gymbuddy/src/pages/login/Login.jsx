@@ -36,7 +36,8 @@ const Login = () => {
   return (
     <div className = "login-page">
         <div className = "login-container">
-            <h1>Login</h1>
+            <h1>GymBuddy</h1>
+            <h2>Login</h2>
             <form className = "login-form" onSubmit = {handleSubmit}>
 
             <div className='input-group'>
@@ -46,7 +47,6 @@ const Login = () => {
                 name = "email"
                 type = "email"
                 id = "login-email"
-                placeholder = "Email"
                 value = {email}
                 onChange = {(e) => setEmail(e.target.value)}
                 />
@@ -59,7 +59,6 @@ const Login = () => {
                 name = "password"
                 type = "password"
                 id = "password"
-                placeholder = "Password"
                 value = {password}
                 onChange = {(e) => setPassword(e.target.value)}
                 />

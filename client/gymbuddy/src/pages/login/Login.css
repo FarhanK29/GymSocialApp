@@ -4,26 +4,79 @@
     font-size: 20px;
     text-align: center;
     color: black;
+    background-color:#FBE6E6 ;
+    padding: 100px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
+
 .input-group {
+    
     display: flex;
     align-items: center; /* This vertically aligns the label and input if their sizes differ */
     margin-bottom: 15px; /* Adds some space between each input group */
     max-width: 700px;
+
 }
   
-.login-label {
 
+
+
+.login-label {
+    margin-bottom: 5px; /* This controls spacing between label and input */
+    display: block; /* Ensures label is on top of input */
     margin-right: 10px; /* Adds some space between the label and the input */
     min-width: 80px; /* Ensures labels have enough width and don't wrap */
 }
   
 .login-input {
     flex-grow: 1; /* Allows the input to take up the remaining space */
+    border: 1px solid #000;
+    padding: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
 }
 .login-page{
     display: flex;
     align-items: center;
+    background: linear-gradient(180deg, #D2C7FF 0%, #746D8E 100%); 
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+
+
 }
 
+.login-button:hover {
+    background-color: #655d9e; /* Darken button color on hover */
+}
+  
+.login-redirect {
+    text-align: center;
+    margin-top: 20px;
+}
+  
+.login-redirect a {
+    color: #836eaa; /* Match this to your link color */
+    text-decoration: none; /* Removes underline from links */
+}
+  
+.login-redirect a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+.login-button {
+    background-color: #836eaa; /* Match button color to your image */
+    color: white; /* Adjust as per your image */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Adjust as needed */
+    margin-top: 10px; /* Controls space between last input and button */
+    transition: background-color 0.1s ease; /* Smooth background color change on hover */
+  }

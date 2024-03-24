@@ -1,0 +1,26 @@
+.button-container {
+    text-align: center; /* Center the button */
+    background-color: #FBE6E6; /* Light pink background */
+    padding: 100px;
+    border-radius: 30px;
+    width: fit-content; /* Make container size as per content */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto;
+}
+
+.post-button {
+    font-family: Geneva; /* Match the font from your CSS */
+    font-size: 20px; /* Match the font size from your CSS */
+    background-color: #836eaa; /* Button color as per your CSS */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+    transition: background-color 0.1s ease; /* Smooth color transition on hover */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05); /* Subtle shadow for the button */
+}
+
+.post-button:hover {
+    background-color: #655d9e; /* Darken button color on hover */
+}
