@@ -1,7 +1,8 @@
 import React from 'react'
 import './Signup.css'
 import { useNavigate, Link } from 'react-router-dom'
-import axios from 'axios'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import {auth} from "../../config/firebase"
 
 const Signup = () => {
 
@@ -12,6 +13,23 @@ const Signup = () => {
     const navigate = useNavigate();
 
     const handleSubmit = async(e) => {
+        e.preventDefault();
+        try{
+            if(password === confirmPass){
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user
+                localStorage.setItem('token',user.accessToken);
+                localStorage.setItem('user', JSON.stringify(user))
+                navigate('/')
+            }
+            else{
+                alert("Passwords do not match!");
+
+            }
+        }catch(error)
+        {
+            console.error(error);
+        }
     }
 
    

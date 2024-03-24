@@ -1,20 +1,35 @@
 import React from 'react'
 import './Login.css'
 import {Link, useNavigate} from 'react-router-dom'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import {auth} from "../../config/firebase"
 
 
 
 
 const Login = () => {
 
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('')
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('')
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleSubmit = async(e) => {
+  const handleSubmit = async(e) => {
+      e.preventDefault();
+      try{
+          const userCredential = await signInWithEmailAndPassword(auth, email, password);
+          const user = userCredential.user
+          localStorage.setItem('token', user.accessToken);
+          localStorage.setItem('user', JSON.stringify(user))
+          navigate('/')
+      } catch(error){
+          alert("Incorrect email or password entered");
+          console.error(error)
+          setEmail("");
+          setPassword("");
+      }
+  }
 
-    }
 
 
 
