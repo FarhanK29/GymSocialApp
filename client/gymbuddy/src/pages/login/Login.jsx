@@ -38,26 +38,33 @@ const Login = () => {
         <div className = "login-container">
             <h1>Login</h1>
             <form className = "login-form" onSubmit = {handleSubmit}>
-            <label className = "login-label" htmlFor = "login-email">Email</label>
-            <input
-            className = "login-input"
-            name = "email"
-            type = "email"
-            id = "login-email"
-            placeholder = "Email"
-            value = {email}
-            onChange = {(e) => setEmail(e.target.value)}
-            />
+
+            <div className='input-group'>
+                <label className = "login-label" htmlFor = "login-email">Email</label>
+                <input
+                className = "login-input"
+                name = "email"
+                type = "email"
+                id = "login-email"
+                placeholder = "Email"
+                value = {email}
+                onChange = {(e) => setEmail(e.target.value)}
+                />
+            </div>
+            <div className='input-group'>
+
             <label className = "login-label" htmlFor = "login-password">Password</label>
-            <input
-            className = "login-input"
-            name = "password"
-            type = "password"
-            id = "password"
-            placeholder = "Password"
-            value = {password}
-            onChange = {(e) => setPassword(e.target.value)}
-            />
+                <input
+                className = "login-input"
+                name = "password"
+                type = "password"
+                id = "password"
+                placeholder = "Password"
+                value = {password}
+                onChange = {(e) => setPassword(e.target.value)}
+                />
+            </div>
+
             <button className = "login-button">Login</button>
             <p className = "login-redirect">Don't have an account? <Link to = "/signup">Register</Link></p>
             </form>

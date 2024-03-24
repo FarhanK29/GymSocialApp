@@ -1,0 +1,29 @@
+.login-container{
+    margin: 0 auto;
+    font-family: Geneva;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+
+}
+.input-group {
+    display: flex;
+    align-items: center; /* This vertically aligns the label and input if their sizes differ */
+    margin-bottom: 15px; /* Adds some space between each input group */
+    max-width: 700px;
+}
+  
+.login-label {
+
+    margin-right: 10px; /* Adds some space between the label and the input */
+    min-width: 80px; /* Ensures labels have enough width and don't wrap */
+}
+  
+.login-input {
+    flex-grow: 1; /* Allows the input to take up the remaining space */
+}
+.login-page{
+    display: flex;
+    align-items: center;
+}
+
